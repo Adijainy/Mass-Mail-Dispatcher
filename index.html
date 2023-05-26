@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- bootstrap link -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    
+    <!-- font awesome link -->
+    <script src="https://kit.fontawesome.com/5241c05dd4.js" crossorigin="anonymous"></script>
+
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300&family=Oswald:wght@500;700&family=Ubuntu:wght@500&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/style.css">
+    <title>Mass Mail Dispatch</title>
+</head>
+
+<body>
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg bg-body-tertiary" data-bs-theme="dark">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">MMD</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Home</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+      <!-- HEADING -->
+    <div class="container">
+        <div class="row  head-row top-head">
+            <div class="col-lg-6 col-md-12 col-sm-12 headCol1"> 
+                <h1 id="main-title">MASS MAIL<br> DISPATCHER</h1> 
+                <p>Power up your email marketing with our efficient mass email dispatch service, reaching a large audience effortlessly.</p>
+                <a class="btn btn-lg btn-primary getStarted" href="#email-area" role="button">Get Started</a>
+            </div>
+
+            <!-- MAIL IMAGE -->
+            <div class="col-lg-6 col-md-12 col-sm-12 headCol2"> 
+                <img class="mail-img" src="images/email.png" alt="send mass mails"> 
+            </div>
+        </div>
+    
+        <!-- EMAIL FORM SECTION -->
+        <div class="row" id="email-area">
+
+            <!-- EMAIL FORM -->
+            <div class="col-lg-6 col-md-12 col-sm-12 mailDeco sendMail">
+                <h3>Fill the Details</h3>
+                <div class="container" >
+                    <form id="emailForm" data-bs-theme="light">
+                        <div class="mb-3">
+                          <label for="emailInput" class="form-label">From</label>
+                          <input type="email" class="form-control" id="emailInput" aria-describedby="emailHelp" required>
+                          <div id="emailHelp" class="form-text">Enter sender's email address</div>
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label" for="fileInput">CSV File</label>
+                            <div class="input-group">
+                                <input type="file" class="form-control" id="fileInput" aria-describedby="fileHelp" accept=".csv" required>
+                            </div>
+                            <div id="fileHelp" class="form-text">Upload .csv file</div>
+                        </div>
+                        
+
+                        <div class="mb-3">
+                            <label for="subjectText" class="form-label">Subject</label>
+                            <textarea class="form-control" id="subjectText" rows="1" required></textarea>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="bodyText" class="form-label">Compose Email</label>
+                            <textarea class="form-control" id="bodyText" rows="9" required></textarea>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                      </form>
+                </div>
+            </div>
+
+            <!-- VALID INVALID SECTION -->
+            <div class="col-lg-5 col-md-12 col-sm-12 mailDeco showValid">
+                <div class="row">
+                    <h4>Valid Emails : </h4>
+                    <div id="validEmails">
+                        <textarea class="form-control" readonly id="validText" rows="9"></textarea>
+                    </div>
+                    <p id="validcnt">Count: </p>
+                </div>
+                <div class="row" >
+                    <h4>Invalid Emails :</h4>
+                    <div  id="invalidEmails">
+                        <textarea class="form-control" readonly id="invalidText" rows="9"></textarea>
+                    </div>
+                    <p id="invalidcnt">Count: </p>
+                </div>
+            </div>
+
+        </div>
+
+</div>
+    <!-- FOOTER -->
+    <footer>
+    </footer>
+
+    <!-- EMAILJS AND JS LINK -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2.4.0/dist/email.min.js">
+    </script>
+    <script src="jsFiles/index.js"></script>
+
+    <!-- bootstrap js link-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+</body>
+</html>

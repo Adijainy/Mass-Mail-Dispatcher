@@ -1,0 +1,125 @@
+/*
+https://realtimecolors.com/?colors=fcfcfc-151515-f54c28-1b1918-689775
+https://realtimecolors.com/?colors=424242-ffffff-f54c28-f2f5f7-689775
+*/
+*, *::after, *::before{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    width: 100%;
+    margin: auto;
+    font-family: 'Inter', sans-serif;
+}
+/* navbar */
+.navbar{
+    background-color: rgb(1, 139, 138, 0.8) !important ;
+    font-weight: bold;
+    font-family: 'Inter', sans-serif;
+}
+.navbar-brand{
+    font-family: 'Ubuntu', sans-serif;
+}
+.navigation{
+    padding: 0 2rem 0 2rem;
+}
+.form-switch{
+    color: white;
+}
+
+/* top head content */
+h1{
+    font-family: 'Oswald', sans-serif;
+    font-weight: 700;
+    font-style: italic;
+    font-size: 5rem;
+    color: #424242
+}
+.top-head{
+    height: 93vh;
+    padding: 4rem 5rem 2rem 5rem;
+}
+.headCol1{
+    text-align: left;
+    padding-top: 5rem;
+}
+.headCol2{
+    text-align: center;
+    padding-top: 4rem;
+}
+.top-head p{
+    font-size: 1.3rem;
+    margin: 2rem 0 2rem 0;
+}
+.btn{
+    background-color: #f54c28;
+    border-color: #f54c28;
+    --bs-btn-hover-bg: #c54224 ;
+    --bs-btn-hover-border-color: #c54224
+}
+.head-row{
+    padding: 3rem;
+}
+
+/* mail form area */
+#email-area{
+    padding: 1rem 4rem 2rem 4rem;
+}
+.mailDeco{
+    /* border: 3px solid rgb(1, 139, 138, 0.8);
+    border-radius: 2px; */
+    padding: 2rem;
+    background-color: #f2f5f7;
+
+}
+.sendMail h3, h4{
+    font-family: 'Ubuntu', sans-serif;
+    color: #424242;
+
+}
+.showValid{
+    margin-left: 3rem;
+}
+
+footer{
+    height: 2rem;
+    background-color: rgb(1, 139, 138, 0.8);
+}
+
+/* dynamic styling */
+@media  (max-width: 992px) {
+    .top-head{
+        display: block;
+    }
+    .headCol1{
+        padding-top: 0;
+    }
+    h1{
+        font-size: 300%;
+    }
+    .top-head p{
+        font-size: 1rem;
+    }
+    .headCol2{
+        padding-top: 3rem;
+    }
+    .mail-img{
+        width: 100%;
+    }
+    #email-area{
+        margin-top: 40%;
+        display: block;
+    }
+    .sendMail{
+        display: block;
+    }
+    .mailDeco{
+        display: block;
+        margin-bottom: 2rem;
+    }
+    .showValid{
+        margin: auto;
+    }
+}
+
